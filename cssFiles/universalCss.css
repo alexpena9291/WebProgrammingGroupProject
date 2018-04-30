@@ -2,10 +2,11 @@
 	background-color:			#5AAEC6;
 	height:						75px;
 	width:						100%;
-	position:					relative;
+	position:					absolute;
 	top:						0px;
 	left:						0px;
-	padding:					5px;
+	padding-top:				5px;
+	padding-bottom:				5px;
 }
 #topLogo{
 	height:						100%;
@@ -38,5 +39,79 @@
 	margin:						0px;
 }
 body{
+	font-family:				"arial";
+}
+
+#sidebar {
+    height: 100%;
+    width: 15%;
+	float: left;
+    background-color: #111;
+	position:absolute;
+    left:0; 
+	top: 85px; 
+	bottom: 0;
+	text-align:				center;
+}
+div.contentDiv {
+	position:		absolute;
+	width:			85%;
+	height:			100%;
+	top: 			85px;
+	left:			15%;
+	right:			0px;
 	
+}
+
+#sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #6A6A6A;
+    display: block;
+	right: 0;
+}
+
+#sidebar a:hover {
+    color: #f1f1f1;
+}
+
+#sidebar a.active {
+  background-color: #2F2F2F;
+  color: white;
+}
+
+#home{
+	height: 17%;
+	width: 17%;
+	padding-right: 1em;
+	float:					left;
+}
+
+#tasks{
+	height: 20%;
+	width: 20%;
+	padding-right: 1em;
+	float:					left;
+}
+
+#grades{
+	height: 14%;
+	width: 14%;
+	padding-right: 1em;
+	float:					left;
+}
+
+#userdirectory{
+	height: 14%;
+	width: 14%;
+	padding-right: 1em;
+	float:					left;
+}
+
+#courses{
+	height: 13%;
+	width: 13%;
+	padding-right: 1em;
+	float:					left;
 }

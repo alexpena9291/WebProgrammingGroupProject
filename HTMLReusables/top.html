@@ -5,11 +5,13 @@
 		Whiteboard
 		</title>
 		<link href="cssFiles/universalCss.css" type="text/css" rel="stylesheet" />
-		<script src="jsFiles/mainJs.js" type="text/javascript"></script>
+		<link href="cssFiles/mainPage.css" type="text/css" rel="stylesheet" />
+		<script src="processingFiles/mainJs.js" type="text/javascript"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		</head>
 	
 		<body>
+		<div id = "container">
 				<div id = "topBar">
 					<img src = "images/logo.png" alt = "Whiteboard" id = "topLogo"></img>
 					<div id = "userProfileAccess">
@@ -17,8 +19,19 @@
 						<div id = "name-pro-log">
 						<p id = "userNameP">Users Name</p>
 						<a>Profile</a>
-						<a>Logout</a>
+						<a href = "login.php">Logout</a>
 						</div>
 					</div>
 					
 				</div>
+				<div id="sidebar">
+					<a class="active" href="#home"><img src="images/icon8.png" alt="home logo" id="home">Home</a>
+					<a href="#courses"><img src="images/icon7.png" alt="courses logo" id="courses">Courses</a>
+					<a href="#tasks"><img src="images/icon5.png" alt="tasks logo" id="tasks">Tasks</a>
+					<a href="#grades"><img src="images/icon4.png" alt="grades logo" id="grades">Grades</a>
+					<a href="#userdirectory"><img src="images/icon1.png" alt="user directory logo" id="userdirectory">User Directory</a>
+					<a href="#email"></a>
+					<a href="#uhh"></a>
+				</div>
+		</div>
+				
