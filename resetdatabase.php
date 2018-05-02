@@ -34,7 +34,8 @@
 				phone varchar(12) default NULL,
 				email varchar(25) default NULL,
 				username varchar(20) DEFAULT NULL,
-				password varchar(20) DEFAULT NULL
+				password varchar(20) DEFAULT NULL,
+				PRIMARY KEY (person_id)
 			);
 		";
 		
@@ -47,7 +48,8 @@
 				course_name varchar(50) default NULL, 
 				course_grade int(3) NOT NULL,
 				instructor varchar(30) NOT NULL,
-				website varchar(50) default NULL
+				website varchar(50) default NULL,
+				PRIMARY KEY (course_id)
 			);
 		";
 		
@@ -59,7 +61,7 @@
 				announcement varchar(100) default NULL
 			);
 		";
-	
+		
 	try {
 		$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 		// set the PDO error mode to exception
