@@ -1,7 +1,7 @@
 <div class = "contentDiv">
 	<div id = "homeDiv">
 		<div id = "homeAnnouncements">
-		
+			
 		</div>
 		
 		<div id = "homeCourses">
@@ -14,8 +14,55 @@
 		
 		<div id = "homeGrades">
 			<h1>Grades</h1>
+			<div id = "gradesListHome">
+			
+			</div>
 		</div>
-		
-		
+	</div>
+	
+	<div id = "coursesDiv">
+		<div id = "coursesContainer">
+			<h1>Courses</h1>
+			<div id = "courseList">
+			
+			</div>
+		</div>
+	</div>
+	
+	<div id = "gradesDiv">
+		<div id = "gradesContainer">
+			<h1>Grades</h1>
+			<div id = "gradesList">
+			
+			</div>
+		</div>
+	</div>
+	
+	<div id = "userDiv">
+		<div id = "userContainer">
+			<h1>Users</h1>
+			<div id = "getUserById">
+				<form>
+					<input type="text" name="f_name">
+					<input type="text" name="l_name">
+					<input type="submit" value="Search User">
+				</form>
+			</div>
+			<div id = "userList">
+				
+			</div>
+		</div>
 	</div>
 </div>
+
+<script>
+	today=new Date();
+	var cmas=new Date(today.getFullYear(), 4, 11);
+	if (today.getMonth()==11 && today.getDate()>25) 
+	{
+	cmas.setFullYear(cmas.getFullYear()+1); 
+	}  
+	var one_day=1000*60*60*24;
+	document.getElementById("homeAnnouncements").innerHTML = ("<h1>There are " + Math.ceil((cmas.getTime()-today.getTime())/(one_day))+
+	" days left until the end of school!</h1>");
+</script>

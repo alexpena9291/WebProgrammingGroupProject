@@ -37,12 +37,36 @@
 				password varchar(20) DEFAULT NULL
 			);
 		";
+		
+	$user_courses = "
+	USE whiteboard;
+	DROP TABLE IF EXISTS user_courses;
+	CREATE TABLE user_courses(
+				person_id int(10) NOT NULL,
+				course_id int(10) NOT NULL,
+				course_name varchar(50) default NULL, 
+				course_grade int(3) NOT NULL,
+				instructor varchar(30) NOT NULL,
+				website varchar(50) default NULL
+			);
+		";
+		
+	$course_announcements = "
+	USE whiteboard;
+	DROP TABLE IF EXISTS course_announcements;
+	CREATE TABLE course_announcements(
+				course_id int(10) NOT NULL,
+				announcement varchar(100) default NULL
+			);
+		";
 	
 	try {
 		$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 		// set the PDO error mode to exception
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$conn->exec($people);
+		$conn->exec($user_courses);
+		$conn->exec($course_announcements);
 		}
 	catch(PDOException $e){
 		echo $sql . "<br>" . $e->getMessage();
