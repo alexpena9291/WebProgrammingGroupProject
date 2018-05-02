@@ -49,7 +49,8 @@
 				course_grade int(3) NOT NULL,
 				instructor varchar(30) NOT NULL,
 				website varchar(50) default NULL,
-				PRIMARY KEY (course_id)
+				PRIMARY KEY (course_id),
+				FOREIGN KEY (Person_id) REFERENCES Person(Person_id)
 			);
 		";
 		
@@ -58,7 +59,8 @@
 	DROP TABLE IF EXISTS course_announcements;
 	CREATE TABLE course_announcements(
 				course_id int(10) NOT NULL,
-				announcement varchar(100) default NULL
+				announcement varchar(100) default NULL,
+				FOREIGN KEY (course_id) REFERENCES User_courses(course_id)
 			);
 		";
 		
